@@ -9,4 +9,4 @@ Functional Requirements
 - Trigger targets that react, disable, and reset [x/4]
 - Configurable playfield behaviour [x/4]
 - Scene organization and reuse [x/2]
-- Submission requirements met (GitHub + Brightspace match, completed markers) [x/1]
+- Submission requirements met (GitHub + Brightspace match, completed markers) [x/1] 
