@@ -5,6 +5,7 @@ using UnityEngine;
 public class FreezeZone : MonoBehaviour
 {
     private Vector2 _initialBallVelocity;
+    [SerializeField] private float freezeTime;
     private bool _frozen;
 
     void OnTriggerEnter2D(Collider2D collider2D)
@@ -23,10 +24,10 @@ public class FreezeZone : MonoBehaviour
     private IEnumerator FreezeBall(Rigidbody2D ballRB)
     {
         ballRB.bodyType = RigidbodyType2D.Static;
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(freezeTime);
         ballRB.bodyType = RigidbodyType2D.Dynamic;
         ballRB.linearVelocity = _initialBallVelocity;
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(freezeTime);
         _frozen = false;
     }
 }
